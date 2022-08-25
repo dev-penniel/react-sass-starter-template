@@ -1,0 +1,18 @@
+.logo{
+  width: 20%;
+  height: auto;
+}
+
+nav{
+  padding: 20px;
+  margin: 0 auto;
+  max-width: $xxl;
+  display: flex;
+  justify-content: space-between;
+
+  .nav-links{
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,15 @@
+// reset
+@import 'reset';
+
+@import 'variables';
+@import 'mixins';
+
+// pages
+@import './page/home';
+@import './page/about';
+@import './page/contact';
+
+// components
+@import './components/header';
+@import './components/navbar';
+@import './components/footer';
