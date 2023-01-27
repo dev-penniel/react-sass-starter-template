@@ -1,4 +1,4 @@
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet, Link, NavLink } from 'react-router-dom';
 
 // import all images
 import { images } from './constants';
@@ -7,6 +7,13 @@ import { images } from './constants';
 import { Header, Navbar, Footer } from './components'
 
 function App() {
+
+  let activeStyle = {
+    color: "#1592E6",
+  };
+
+  let activeClassName = "underline";
+
   return (
     <div className="App">
       {/* Navigation Bar */}
@@ -24,9 +31,26 @@ function App() {
         }}
       >
         {/* Navigation  Links */}
-        <Link to="/" >Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
+        <NavLink 
+          to="/" 
+          style={({ isActive }) =>
+            isActive ? activeStyle : undefined
+            }>Home
+        </NavLink>
+
+        <NavLink 
+          to="/about" 
+          style={({ isActive }) =>
+            isActive ? activeStyle : undefined
+            }>About
+        </NavLink>
+
+        <NavLink 
+          to="/contact" 
+          style={({ isActive }) =>
+            isActive ? activeStyle : undefined
+            }>Contact
+        </NavLink>
       </div>
       </nav>
       <Outlet />

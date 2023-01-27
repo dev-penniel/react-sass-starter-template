@@ -1,13 +1,13 @@
 import React from 'react'
 import { images } from '../constants'
 
-function Contact() {
+function Home() {
   return (
     <div>
-        <h1>Contact Page</h1>
+        <h1>Home Page</h1>
         <img src={images.image} alt="" />
     </div>
   )
 }
 
-export default Contact
+export default Home
